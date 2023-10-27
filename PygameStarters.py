@@ -1,4 +1,5 @@
 import pygame
+import pyautogui
 
 class CameraGroup(pygame.sprite.Group):
     def __init__(self, display_surf, screen):
@@ -112,4 +113,22 @@ class Timer:
         current_time = pygame.time.get_ticks()
         if current_time - self.start_time >= self.duration:
             self.deactivate()
+
+# settings
+ZOOM = 4
+TILE_SIZE = 32
+WINDOW_WIDTH = size()[0]
+WINDOW_HEIGHT = size()[1]
+DISPLAY_WIDTH = WINDOW_WIDTH / ZOOM
+DISPLAY_HEIGHT = WINDOW_HEIGHT / ZOOM
+
+ANIMATION_SPEED = 8
+
+LEVEL_LAYERS = {
+	'main': 0
+}
+
+
+
+
 
